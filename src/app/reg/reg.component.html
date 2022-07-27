@@ -1,0 +1,95 @@
+<div
+  class="bg-image d-flex justify-content-center align-items-center"
+  style="
+    background-image: url('https://img.freepik.com/free-vector/white-abstract-background_23-2148810112.jpg'); height: 100vh ">
+  
+
+
+<form #regForm="ngForm" (ngSubmit)="registerMe(regForm)"> 
+
+    <table> 
+    <tr> 
+    <td> Name </td> 
+    <td><input type="text" name="name" [(ngModel)] ="user.name"> </td>
+    </tr>
+    
+        <tr> 
+        <td> Email </td> 
+        <td><input type="text" name="email"  [(ngModel)]="user.email" required> </td>
+        </tr>
+
+        <tr> 
+            <td> password </td> 
+            <td><input type="password" name="password"  [(ngModel)]="user.password"> </td>
+            </tr>
+
+            <tr> 
+                <td> confirm password </td> 
+                <td><input type="password" name="cPassword"  [(ngModel)]="user.cPassword"> </td>
+                </tr>
+    
+             <tr> 
+            <td> dob </td> 
+            <td><input type="date" name="dob"  [(ngModel)]="user.dob"> </td>
+            </tr>
+          
+            <tr> 
+                <td> contact </td> 
+                <td><input type="text"  name="contact" [(ngModel)]="user.contact"> </td>
+                </tr>
+    
+                <tr> 
+                    <td> gender </td> 
+                    <td> 
+                        MALE : <input name="gender"  type="radio" [(ngModel)]="user.gender" value="male" >
+                        FEMALE : <input name="gender"  type="radio" [(ngModel)]="user.gender" value="female" >
+                    </td>
+                    </tr>
+        
+    
+
+
+                <tr> 
+                    <td> Security Question </td> 
+                    <td>
+                       <select name="security question"  [(ngModel)]="user.securityQuestion"> 
+                        <option> name of first school </option>
+                        <option> name of first car </option>
+                        <option> name of first crush </option>
+
+                       </select>
+                    </td>
+                    </tr>
+                     
+
+                    <tr> 
+                        <td> security answer </td> 
+                        <td><input type="text"  name="security answer" [(ngModel)]="user.securityAnswer"> </td>
+                        </tr>
+            
+
+
+                        <tr> 
+                            <td> address </td> 
+                            <td>
+                                <textarea name="address"  [(ngModel)]="user.address"> </textarea>
+                            </td>
+                            </tr>
+                
+                
+
+                            <tr> 
+                                <td>  </td> 
+                                <td>
+                                <input type="submit">
+                                </td>
+                                </tr>
+                                <br>
+                                <a routerLink="/login"><button>login</button></a>
+                    
+    
+     
+
+</table>
+</form>
+

@@ -1,0 +1,25 @@
+<p>fav-list works!</p>
+<br>
+
+<section class="vh-100 gradient-custom">
+  <div class="container py-5 h-100">
+    <div class="row d-flex justify-content-left align-items-left h-100">
+     
+        
+          <div class="card-body p-5 text-left">
+
+
+<div *ngFor="let article of favourites">  
+
+<h1> {{article.title}} </h1>
+
+<h3> {{article.author}}</h3>
+<p><img [src]="article.urlToImage" width="200px"> </p>
+<p> {{article.description}}</p>
+<p> <a [href]="article.url" target="_blank"> read more... </a> </p>
+
+
+
+  
+  
+  </div>

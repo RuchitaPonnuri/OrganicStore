@@ -1,0 +1,53 @@
+<div
+  class="bg-image d-flex justify-content-center align-items-center"
+  style="
+    background-image: url('https://img.freepik.com/free-vector/white-abstract-background_23-2148810112.jpg'); height: 100vh ">
+  
+<form #regForm="ngForm" (ngSubmit)="loginValidate(regForm)"> 
+
+  <table> 
+   
+      <tr> 
+      <td> Email </td> 
+      <td><input type="text" name="email"  [(ngModel)]= "userAuth.email" required> </td>
+      </tr>
+
+      <tr> 
+          <td> password </td> 
+          <td><input type="password" name="password"  [(ngModel)]= "userAuth.password"> </td>
+          </tr>
+
+          <input type="submit" value="login">
+
+        <br>
+        
+
+          <a routerLink="/reg"> new user register here </a>
+          <br>
+          <a routerLink="/forgotpass"> forgot pass </a>
+        <br>
+        <button routerLink="/add" style="margin: 12px;">admin</button>
+
+
+</table>
+
+</form>
+</div>
+
+
+
+
+
+
+
+<style> 
+  input[type=submit] {
+    background-color: #6495ED;
+    border: double;
+    color: white;
+    padding: 16px 32px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
+  </style>

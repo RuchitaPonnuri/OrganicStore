@@ -1,0 +1,58 @@
+
+<section class="vh-500 gradient-custom">
+    <div class="container p-3 -100"> 
+      
+  <div class="topnav">
+    <button class="btn bg-dark text-white " style="margin: 8px;" routerLink="/add1">Home</button>
+
+    <button class="btn bg-dark text-white " style="margin: 8px;" routerLink="/viewproduct">View product</button>
+
+    
+    <button class="btn bg-dark text-white"style="margin: 8px;"  routerLink="/login" >LogOut </button>
+   </div>
+   </div>
+</section>
+<br>
+<br>
+<body>
+    <br>
+    
+
+
+    Product NAME :<input type="text" [(ngModel)]="productname" placeholder="product name">
+    <br> 
+    <br>
+    Product id:<input type="number" [(ngModel)]="productid" placeholder="product id">
+    
+            
+    <br>
+    <br>
+    
+    Cost: <input type="number" [(ngModel)]="cost" placeholder="cost">
+    <br>
+    <br>
+    QTY: <input type="number" [(ngModel)]="qty" placeholder="qty">
+    <br>
+    <br>
+    
+    <img [src]="img" height="100" width="100">
+    <br>
+    <br>
+        <input type="file" (change)="uploadPic($event)">
+    <br>
+        <br>
+    
+        catalogue: <input type="number" [(ngModel)]="catalogue" placeholder="catalogue">
+        <br>
+        <br>
+    
+    
+    
+    
+    
+    
+    <button (click)="addProduct()" >  add product </button>
+    
+</body>
+
+

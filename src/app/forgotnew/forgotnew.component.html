@@ -1,0 +1,59 @@
+
+
+
+<form #forgotForm="ngForm" (ngSubmit)="forgotPass(forgotForm)"> 
+
+    <table> 
+        <tr> 
+        <td> Email </td> 
+        <td><input type="text" name="email"  [(ngModel)]="user.email" required> </td>
+        </tr>
+
+
+                <tr> 
+                    <td> Security Question </td> 
+                    <td>
+                       <select name="security question"  [(ngModel)]="user.securityQuestion"> 
+                        <option> name of first school </option>
+                        <option> name of first car </option>
+                        <option> name of first crush </option>
+
+                       </select>
+                    </td>
+                    </tr>
+                     
+
+                    <tr> 
+                        <td> security answer </td> 
+                        <td><input type="text"  name="security answer" [(ngModel)]="user.securityAnswer"> </td>
+                        </tr>
+            
+
+
+                
+
+                            <tr> 
+                                <td>  </td> 
+                                <td>
+                                <input type="submit">
+                                </td>
+                                </tr>
+                                <br>
+                             <button  style="margin: 8px;" routerLink="/login"> login</button>
+                    
+    
+     
+
+</table>
+</form>
+<style>
+input[type=submit] {
+    background-color: #6495ED;
+    border: double;
+    color: white;
+    padding: 16px 32px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
+  </style>
